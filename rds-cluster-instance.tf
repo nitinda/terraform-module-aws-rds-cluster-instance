@@ -1,6 +1,6 @@
 resource "aws_rds_cluster_instance" "rds_cluster_instance" {
   count                           = 2
-  identifier                      = var.identifier
+  identifier                      = "${var.identifier}-${count.index}"
   cluster_identifier              = var.cluster_identifier
   instance_class                  = var.instance_class
   engine                          = var.engine
@@ -12,7 +12,6 @@ resource "aws_rds_cluster_instance" "rds_cluster_instance" {
   apply_immediately               = var.apply_immediately
   monitoring_role_arn             = var.monitoring_role_arn
   monitoring_interval             = var.monitoring_interval
-  promotion_tier                  = var.promotion_tier
   auto_minor_version_upgrade      = var.auto_minor_version_upgrade
   performance_insights_enabled    = var.performance_insights_enabled
   performance_insights_kms_key_id = var.performance_insights_kms_key_id
