@@ -50,7 +50,7 @@ variable "monitoring_role_arn" {
 variable "monitoring_interval" {
   description = "The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance"
   default     = 0
-  type        = bool
+  type        = number
 }
 
 variable "auto_minor_version_upgrade" {
@@ -71,7 +71,7 @@ variable "performance_insights_kms_key_id" {
 }
 
 variable "copy_tags_to_snapshot" {
-  description = " Copy all Cluster tags to snapshots"
+  description = "Copy all Cluster tags to snapshots"
   type        = bool
   default     = false
 }

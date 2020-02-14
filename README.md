@@ -63,6 +63,21 @@ _The variables required in order for the module to be successfully called from t
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Comments_** |
 |:----|:----|-----:|:---:|
+| **_identifier_** | _The identifier for the RDS instance_ | _string_ | **_Required_** |
+| **_cluster\dentifier_** | _ID of aws\_rds\_cluster resource_ | _string_ | **_Required_** |
+| **_engine_** | _The name of the database engine_ | _string_ | **_Required_** |
+| **_engine\_version_** | _The database engine version_ | _string_ | **_Required_** |
+| **_instance\_class_** | _The instance class to use_ | _string_ | **_Required_** |
+| **_publicly\_accessible_** | _Bool to control if instance is publicly accessible_ | _bool_ | **_Optional (Default false)_** |
+| **_db\_subnet\_group\_name_** | _A DB subnet group to associate with this DB instances_ | _list(string)_ | **_Required_** |
+| **_db\_parameter\_group\_name_** | _The name of the DB parameter group to associate_ | _list(string)_ | **_Required_** |
+| **_apply\_immediately_** | _Determines whether or not any DB_ | _bool_ | **_Optional (Default false)_** |
+| **_monitoring\_role\_arn_** | _The ARN for the IAM role_ | _string_ | **_Optional (Default null)_** |
+| **_monitoring\_interval_** | _The interval, in seconds_ | _number_ | **_Optional (Default 0)_** |
+| **_auto\_minor\_version\_upgrade_** | _Indicates that minor engine upgrades_ | _bool_ | **_Optional (Default false)_** |
+| **_performance\_insights\_enabled_** | _TSpecifies whether Performance Insights_ | _bool_ | **_Optional (Default false)_** |
+| **_performance\_insights\_kms\_key\_id_** | _The ARN for the KMS key_ | _bool_ | **_Optional (Default false)_** |
+| **_copy\_tags\_to\_snapshot_** | _Copy all Cluster tags to snapshots_ | _bool_ | **_Optional (Default false)_** |
 | **_tags_** | _Resource tags_ | _map(string)_ | **_Required_** |
 
 
