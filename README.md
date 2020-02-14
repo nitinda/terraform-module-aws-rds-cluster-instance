@@ -75,12 +75,15 @@ _The variables required in order for the module to be successfully called from t
 
 _This module has the following outputs:_
 
-* **_endpoint_**
 * **_id_**
-* **_arn_**
-* **_database\_name_**
+* **_cluster\_identifier_**
+* **_identifier_**
+* **_id_**
+* **_writer_**
+* **_endpoint_**
 * **_engine_**
-* **_master\_username_**
+* **_engine\_version_**
+* **_database\_name_**
 
 
 ### _Usage_
