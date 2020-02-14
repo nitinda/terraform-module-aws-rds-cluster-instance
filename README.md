@@ -78,7 +78,6 @@ _This module has the following outputs:_
 * **_id_**
 * **_cluster\_identifier_**
 * **_identifier_**
-* **_id_**
 * **_writer_**
 * **_endpoint_**
 * **_engine_**
